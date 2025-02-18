@@ -2,3 +2,12 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --bg-color: #000028;
+  --accent-color: #FF0070;
+  --accent-color-title: #DB00FF;
+  --subtitle-color: #000028;
+  --main-font: 'IBM Plex mono';
+  --main-font-color: #F1B2CE;
+  --subtitle-font-size: 18px;
+}
