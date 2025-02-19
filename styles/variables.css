@@ -10,6 +10,7 @@
   --main-font: 'IBM Plex mono';
   --main-font-color: #F1B2CE;
   --title-font-size: 116px;
+  --title-font-weight: 700;
   --bold-font-weight: 700;
   --subtitle-font-size: 18px;
   --bg-image: url('../images/cover-image-dark.png');
