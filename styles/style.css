@@ -7,6 +7,10 @@
   color: var(--main-font-color);
   background-color: var(--bg-color);
   padding: 10px;
+  background-image: var(--bg-image);
+  object-fit: cover;
+  object-position: center;
+  background-attachment: fixed;
 }
 
 
@@ -15,28 +19,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
-  height: 100vh;
-}
-
-.header::before, .header::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-
-.header::before {
-  top: 0;
-  right: 0;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
-}
-
-.header::after {
-  bottom: 0;
-  left: 0;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  min-height: 100vh;
+  margin-block-end: 40px;
 }
 
 .rec_element{
@@ -89,12 +73,20 @@
   text-align: center;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid #FF007040;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
 .header__theme-menu-button_active{
   border: 1px solid var(--accent-color);
 }
 
 .header__title {
-  font-weight: 700;
+  font-weight: var(--bold-font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 96px;
   text-transform: lowercase;
@@ -113,7 +105,63 @@
   justify-self: end;
   align-self: start;
   font-style: normal;
-  font-weight: bold;
+  font-weight: var(--bold-font-weight);
   font-size: var(--subtitle-font-size);
   line-height: 1.3em;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.content__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.content__section-title{
+  color: var(--accent-color);
+}
+
+.content__section-image_block{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.content__section-image{
+  inline-size: 355px;
+}
+
+.link-decor {
+  text-shadow: 2px 1px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.link-decor:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-decor:focus-visible {
+  border: 1px solid currentColor;
+}
+
+.footer {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block-start: 40px;
+}
+
+.footer__title{
+  font-weight: var(--bold-font-weight);
+  font-size: var(--title-font-size);
+  justify-self: center;
+  align-self: center;
+  color: var(--accent-color-title);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

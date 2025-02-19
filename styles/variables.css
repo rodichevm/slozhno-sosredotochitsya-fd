@@ -9,5 +9,8 @@
   --subtitle-color: #000028;
   --main-font: 'IBM Plex mono';
   --main-font-color: #F1B2CE;
+  --title-font-size: 116px;
+  --bold-font-weight: 700;
   --subtitle-font-size: 18px;
+  --bg-image: url('../images/cover-image-dark.png');
 }
