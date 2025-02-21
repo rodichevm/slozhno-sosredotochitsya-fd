@@ -1,17 +1,16 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
   --bg-color: #000028;
+  --main-font-color: #F1B2CE;
+  --title-color: #FF0070;
+  --subtitle-color: #000028;
   --accent-color: #FF0070;
   --accent-color-title: #DB00FF;
-  --subtitle-color: #000028;
+  --switcher-theme-color: #FF0070;
+
+  --bg-image: url('../images/cover-image-dark.png');
   --main-font: 'IBM Plex mono';
-  --main-font-color: #F1B2CE;
   --title-font-size: 116px;
   --title-font-weight: 700;
   --bold-font-weight: 700;
   --subtitle-font-size: 18px;
-  --bg-image: url('../images/cover-image-dark.png');
 }
