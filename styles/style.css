@@ -5,8 +5,8 @@
 .page {
   font-family: var(--main-font), monospace;
   font-size: 18px;
-  font-weight: normal;
-  padding: 0 10px;
+  font-weight: 400;
+  line-height: 1.3em;
   color: var(--main-font-color);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
@@ -143,7 +143,7 @@
 
 .content__section-text_block-subtitle {
   height: min-content;
-  margin-block-end: 20px;
+  margin-block-end: 10px;
 }
 
 .content__section-text_block-subtitle,
@@ -160,6 +160,11 @@
 .content__section-text_block-subtitle-tips {
   font-size: var(--subtitle-font-size);
   font-weight: 400;
+  margin-block-end: 10px;
+}
+
+.content__section-text_block:has(.content__section-text_block-subtitle-tips) .content__section-text_block-subtitle{
+  margin-block-end: 20px;
 }
 
 .content__section-images_gallery {
