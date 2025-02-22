@@ -24,6 +24,7 @@
     --switcher-theme-color: #353430;
     --bg-image: url('../images/cover-image-light.png');
   }
+
   .theme-auto .rec_element {
     display: none;
   }
