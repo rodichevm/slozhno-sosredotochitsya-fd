@@ -9,9 +9,8 @@
 
   --bg-image: url('../images/cover-image-dark.png');
   --main-font: 'IBM Plex mono';
+  --main-font-size: 18px;
   --title-font-weight: 700;
-  --bold-font-weight: 700;
-  --subtitle-font-size: 18px;
   --main-padding-small: 10px;
   --main-padding-big: 20px;
 }

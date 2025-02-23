@@ -1,11 +1,11 @@
 .page {
   font-family: var(--main-font, 'IBM Plex mono'), monospace;
-  font-size: 18px;
+  font-size: var(--main-font-size, 18px);
   font-weight: 400;
   line-height: 1.3em;
-  color: var(--main-font-color);
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
+  color: var(--main-font-color, #F1B2CE);
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-image, url('../images/cover-image-dark.png'));
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -17,21 +17,21 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  content: "";
+  content: '';
 }
 
 .decorated-zone::before {
-  top: var(--main-padding-small);
-  right: var(--main-padding-small);
-  border-top: 1px solid var(--switcher-theme-color);
-  border-right: 1px solid var(--switcher-theme-color);
+  top: var(--main-padding-small, 10px);
+  right: var(--main-padding-small, 10px);
+  border-top: 1px solid var(--switcher-theme-color, #FF0070);
+  border-right: 1px solid var(--switcher-theme-color, #FF0070);
 }
 
 .decorated-zone::after {
-  bottom: var(--main-padding-small);
-  left: var(--main-padding-small);
-  border-bottom: 1px solid var(--switcher-theme-color);
-  border-left: 1px solid var(--switcher-theme-color);
+  bottom: var(--main-padding-small, 10px);
+  left: var(--main-padding-small, 10px);
+  border-bottom: 1px solid var(--switcher-theme-color, #FF0070);
+  border-left: 1px solid var(--switcher-theme-color, #FF0070);
 }
 
 .rec_element {
@@ -41,12 +41,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--switcher-theme-color);
+  color: var(--switcher-theme-color, #FF0070);
   gap: 10px;
 }
 
 .rec_element:before {
-  line-height: 25px;
+  line-height: 1.4em;
   content: "REC";
 }
 
@@ -54,18 +54,19 @@
   display: block;
   width: 10px;
   height: 10px;
-  content: "";
+  content: '';
   border-radius: 50%;
-  background: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  background: var(--accent-color, #FF0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
 }
 
 .header {
   position: relative;
   display: grid;
   align-items: center;
-  padding: var(--main-padding-small);
-  min-block-size: 100vh;
+  padding: var(--main-padding-small, 10px);
+  block-size: 100vh;
+  min-block-size: 668px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   margin-block-end: 40px;
@@ -84,9 +85,10 @@
 }
 
 .header__theme-menu-button {
-  line-height: 18px;
+  line-height: 1em;
   text-align: center;
   text-transform: lowercase;
+  color: var(--accent-color, #FF0070);
   border: none;
   background-color: transparent;
   min-inline-size: 70px;
@@ -98,39 +100,39 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color, #FF0070);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--switcher-theme-color);
+  border: 1px solid var(--switcher-theme-color, #FF0070);
 }
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: var(--bold-font-weight);
+  font-weight: var(--title-font-weight, 700);
   line-height: 82.5%;
   text-transform: lowercase;
-  color: var(--accent-color-title);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--accent-color-title, #DB00FF);
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
   place-self: center;
 
 }
 
 .header__subtitle {
-  font-size: var(--subtitle-font-size);
-  font-weight: var(--bold-font-weight);
+  font-size: var(--main-font-size, 18px);
+  font-weight: var(--title-font-weight, 700);
   line-height: 1.3em;
 }
 
 .title-decor {
-  color: var(--subtitle-color);
-  background-color: var(--accent-color);
+  color: var(--subtitle-color, #000028);
+  background-color: var(--accent-color, #FF0070);
 }
 
 .content {
   display: grid;
-  padding: 0 var(--main-padding-small);
+  padding: 0 var(--main-padding-small, 10px);
   grid-template-columns: 1fr;
   gap: 50px;
 }
@@ -152,17 +154,17 @@
 
 .content__section-text_block-subtitle,
 .content__section-title {
-  font-size: var(--subtitle-font-size);
-  font-weight: var(--title-font-weight);
+  font-size: var(--main-font-size, 18px);
+  font-weight: var(--title-font-weight, 700);
 }
 
 .content__section-title {
-  color: var(--title-color);
+  color: var(--title-color, #FF0070);
   justify-self: start;
 }
 
 .content__section-text_block-subtitle-tips {
-  font-size: var(--subtitle-font-size);
+  font-size: var(--main-font-size, 18px);
   font-weight: 400;
   margin-block-end: 10px;
 }
@@ -186,7 +188,7 @@
 
 .link-decor {
   text-decoration: none;
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--accent-color, #FF0070);
 }
 
 .link-decor:hover {
@@ -201,18 +203,19 @@
 .footer {
   position: relative;
   display: grid;
-  height: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
   grid-template-columns: 1fr;
   margin-block-start: 40px;
 }
 
 .footer__title {
   font-size: 116px;
-  font-weight: var(--bold-font-weight);
+  font-weight: var(--title-font-weight, 700);
   line-height: 95.7%;
   align-self: center;
-  color: var(--accent-color-title);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--accent-color-title, #DB00FF);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
   justify-self: center;
 }
 
@@ -223,17 +226,17 @@
   }
 
   .decorated-zone::before {
-    top: var(--main-padding-big);
-    right: var(--main-padding-big);
+    top: var(--main-padding-big, 20px);
+    right: var(--main-padding-big, 20px);
   }
 
   .decorated-zone::after {
-    bottom: var(--main-padding-big);
-    left: var(--main-padding-big);
+    bottom: var(--main-padding-big, 20px);
+    left: var(--main-padding-big, 20px);
   }
 
   .header {
-    padding: var(--main-padding-big);
+    padding: var(--main-padding-big, 20px);
     grid-template-columns: 1fr 1fr;
     margin-block-end: 60px;
   }
@@ -254,7 +257,7 @@
   }
 
   .content {
-    padding: 0 var(--main-padding-big);
+    padding: 0 var(--main-padding-big, 20px);
     gap: 80px;
   }
 
@@ -353,6 +356,6 @@
 
   .footer__title {
     font-size: 157px;
-    line-height: 130px;
+    line-height: 0.83em;
   }
 }
