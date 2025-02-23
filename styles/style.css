@@ -1,9 +1,9 @@
 .page {
-  position: relative;
   font-family: var(--main-font, 'IBM Plex mono'), monospace;
   font-size: var(--main-font-size, 18px);
   font-weight: 400;
   line-height: 1.3em;
+  position: relative;
   color: var(--main-font-color, #F1B2CE);
   background-color: var(--bg-color, #000028);
   background-image: var(--bg-image, url('../images/cover-image-dark.png'));
@@ -113,11 +113,11 @@
   font-size: var(--title-font-size-small, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: var(--title-font-weight, 700);
   line-height: 82.5%;
+  cursor: default;
   text-transform: lowercase;
   color: var(--accent-color-title, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
   place-self: center;
-  cursor: default;
 }
 
 .header__subtitle {
@@ -218,10 +218,10 @@
   font-weight: var(--title-font-weight, 700);
   line-height: 95.7%;
   align-self: center;
+  cursor: default;
   color: var(--accent-color-title, #DB00FF);
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
   justify-self: center;
-  cursor: default;
 }
 
 @media (width >= 768px) {
