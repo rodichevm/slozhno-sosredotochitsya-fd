@@ -6,6 +6,8 @@
   --accent-color: #FF8DCB;
   --accent-color-title: #FFC2E6;
   --switcher-theme-color: #353430;
+  --button-outline-color: rgb(50 49 45 / 40%);
+  --button-focus-color: #353430;
   --bg-image: url('../images/cover-image-light.png');
 }
 
@@ -22,6 +24,8 @@
     --accent-color: #FF8DCB;
     --accent-color-title: #FFC2E6;
     --switcher-theme-color: #353430;
+    --button-outline-color: rgb(50 49 45 / 40%);
+    --button-focus-color: #353430;
     --bg-image: url('../images/cover-image-light.png');
   }
 

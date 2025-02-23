@@ -6,11 +6,15 @@
   --accent-color: #FF0070;
   --accent-color-title: #DB00FF;
   --switcher-theme-color: #FF0070;
+  --button-outline-color: rgb(255 0 112 / 40%);
+  --button-focus-color: #FF0070;
 
   --bg-image: url('../images/cover-image-dark.png');
   --main-font: 'IBM Plex mono';
   --main-font-size: 18px;
   --title-font-weight: 700;
+  --title-font-size-small: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-font-size-big: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --main-padding-small: 10px;
   --main-padding-big: 20px;
 }

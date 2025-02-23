@@ -6,5 +6,7 @@
   --accent-color: #FF0070;
   --accent-color-title: #DB00FF;
   --switcher-theme-color: #FF0070;
+  --button-outline-color: rgb(255 0 112 / 40%);
+  --button-focus-color: #FF0070;
   --bg-image: url('../images/cover-image-dark.png');
 }

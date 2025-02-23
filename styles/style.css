@@ -1,4 +1,5 @@
 .page {
+  position: relative;
   font-family: var(--main-font, 'IBM Plex mono'), monospace;
   font-size: var(--main-font-size, 18px);
   font-weight: 400;
@@ -96,11 +97,11 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #35343040;
+  outline: 1px solid var(--button-outline-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color, #FF0070);
+  border-bottom: 1px solid var(--button-focus-color, #FF0070);
 }
 
 .header__theme-menu-button_active {
@@ -109,13 +110,14 @@
 }
 
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--title-font-size-small, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: var(--title-font-weight, 700);
   line-height: 82.5%;
   text-transform: lowercase;
   color: var(--accent-color-title, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
   place-self: center;
+  cursor: default;
 
 }
 
@@ -188,12 +190,12 @@
 
 .link-decor {
   text-decoration: none;
-  text-shadow: 2px 1px 0 var(--accent-color, #FF0070);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
 
 .link-decor:hover {
   cursor: pointer;
-  text-decoration: underline;
+  border-block-end: 1px solid currentColor;
 }
 
 .link-decor:focus-visible {
@@ -210,13 +212,14 @@
 }
 
 .footer__title {
-  font-size: 116px;
+  font-size: var(--title-font-size-small, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: var(--title-font-weight, 700);
   line-height: 95.7%;
   align-self: center;
   color: var(--accent-color-title, #DB00FF);
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
   justify-self: center;
+  cursor: default;
 }
 
 @media (width >= 768px) {
@@ -246,7 +249,7 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: var(--title-font-size-big, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
     grid-column: 1 / 3;
     justify-self: start;
     margin-inline-start: -20px;
@@ -254,6 +257,7 @@
 
   .header__subtitle {
     grid-column: 2;
+    max-inline-size: 50vw;
   }
 
   .content {
@@ -321,7 +325,7 @@
   }
 
   .footer__title {
-    font-size: 120px;
+    font-size: var(--title-font-size-big, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
   }
 
 }
@@ -352,10 +356,5 @@
 
   .content__section:nth-of-type(2) .content__section-text_block:nth-of-type(3) {
     grid-column: 3;
-  }
-
-  .footer__title {
-    font-size: 157px;
-    line-height: 0.83em;
   }
 }
