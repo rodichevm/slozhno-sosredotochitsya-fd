@@ -280,7 +280,7 @@
   }
 
   .content__what .content__section-title {
-    grid-column: 1 / -1;
+    grid-column: 1;
   }
 
   .content__what .content__section-text_block {
@@ -350,6 +350,11 @@
 
   .content__what {
     grid-auto-flow: row;
+  }
+
+  .content__what .content__section-title {
+    grid-column: 1 / -1;
+    max-inline-size: 315px;
   }
 
   .content__what .content__section-text_block {
